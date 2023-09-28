@@ -1,0 +1,128 @@
+.navigation {
+  width: 100%;
+  max-width: 223px;
+  margin-right: 20px;
+  transition: 0.3s;
+
+  &__item-wrapper {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(#fff, 0.1);
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      p {
+        color: var(--color-select);
+      }
+      svg {
+        path,
+        rect,
+        circle {
+          stroke: var(--color-select);
+        }
+      }
+    }
+
+    svg {
+      width: 100%;
+      max-width: 16px;
+      margin-right: 25px;
+
+      path,
+      rect,
+      circle {
+        stroke: #fff;
+        transition: 0.3s;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      transition: 0.3s;
+    }
+
+    &.active {
+      p {
+        color: var(--color-select);
+      }
+      svg {
+        path,
+        rect,
+        circle {
+          stroke: var(--color-select);
+        }
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 30px;
+    height: 20px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    cursor: pointer;
+
+    &::before,
+    &::after,
+    span {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__close {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    border: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 850px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #132e48;
+    border-right: 1px solid rgba(#fff, 0.1);
+    max-width: 320px;
+    padding: 46px 20px;
+    overflow: auto;
+    margin-right: 0;
+    z-index: 100;
+    height: 100vh;
+
+    &.active {
+      left: 0;
+    }
+  }
+}

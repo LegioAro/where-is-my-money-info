@@ -1,0 +1,9 @@
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  max-width: 390px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

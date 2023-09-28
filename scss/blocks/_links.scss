@@ -1,0 +1,40 @@
+.links {
+  padding: 18px 24px;
+  border-radius: 10px;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 23px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-right: 14px;
+
+    p {
+      color: #0b1a28;
+      font-family: var(--font-text-2);
+      font-size: 14px;
+    }
+
+    svg {
+      width: 20px;
+      margin-right: 11px;
+    }
+  }
+
+  &__item-wrapper {
+    margin: 6px;
+  }
+
+  &__item {
+    border-radius: 5px;
+    background-color: var(--color-select);
+    display: flex;
+    padding: 6px 23px;
+  }
+}
