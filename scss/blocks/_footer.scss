@@ -1,0 +1,32 @@
+.footer {
+  padding: 30px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    margin-right: 28px;
+    opacity: 0.8;
+    transition: 0.3s;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 0;
+  }
+}
